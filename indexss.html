@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, shrink-to-fit=no">
     <title>Ella Stitches & Styles | Luxury Fashion Atelier</title>
     <link rel="stylesheet" href="./css/index.css">
-    
+
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <!-- Google Fonts: Elegant & Modern -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <style>
         /* ---------------------- RESET & GLOBAL ---------------------- */
         * {
@@ -28,8 +31,12 @@
             scroll-behavior: smooth;
         }
 
-        h1, h2, h3, h4, .brand-name, .nav-list a {
-            /* font-family: 'Cormorant Garamond', serif; */
+        h1,
+        h2,
+        h3,
+        h4,
+        .brand-name,
+        .nav-list a {
             font-weight: 600;
             letter-spacing: 0.02em;
         }
@@ -39,11 +46,17 @@
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* ---------------------- TOP BAR (LUXURY) ---------------------- */
         .top {
             background: #0a0a0a;
             color: #e9e2d6;
-            padding: 12px 40px;
+            padding: 12px 20px;
             border-bottom: 1px solid rgba(212, 175, 55, 0.3);
         }
 
@@ -60,14 +73,17 @@
         .social-and-title {
             display: flex;
             align-items: center;
-            gap: 35px;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .social-icons a {
             color: #e9e2d6;
-            margin-right: 18px;
+            margin-right: 16px;
             font-size: 16px;
             transition: all 0.3s;
+            display: inline-block;
         }
 
         .social-icons a:hover {
@@ -76,9 +92,9 @@
         }
 
         .brand-name {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             background: linear-gradient(135deg, #e9e2d6, #d4af37);
             -webkit-background-clip: text;
             background-clip: text;
@@ -87,15 +103,17 @@
 
         .contact-info {
             display: flex;
-            gap: 28px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .contact-info a {
             color: #e9e2d6;
-            font-size: 13px;
+            font-size: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             font-weight: 400;
         }
 
@@ -108,13 +126,13 @@
         }
 
         /* ---------------------- NAVBAR (STICKY + GLASS) ---------------------- */
-         .ellae {
+        .ellae {
             position: sticky;
             top: 0;
             z-index: 1000;
             background: rgba(255, 252, 245, 0.96);
             backdrop-filter: blur(10px);
-            padding: 18px 40px;
+            padding: 15px 20px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
@@ -126,15 +144,16 @@
         .nav-list ul {
             display: flex;
             justify-content: center;
-            gap: 48px;
+            gap: 32px;
             list-style: none;
+            flex-wrap: wrap;
         }
 
         .nav-list a {
             text-decoration: none;
             color: #2c241f;
             font-weight: 600;
-            font-size: 17px;
+            font-size: 15px;
             letter-spacing: 0.5px;
             position: relative;
             padding: 5px 0;
@@ -154,9 +173,9 @@
         .nav-list a:hover::after,
         .nav-list a.active::after {
             width: 100%;
-        } 
+        }
 
-         .nav-list a.active {
+        .nav-list a.active {
             color: #d4af37;
         }
 
@@ -173,74 +192,93 @@
             background-image: url(./img/pinterest15.jpg);
             background-size: cover;
             background-position: center;
-            height: 92vh;
+            min-height: 80vh;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
             animation: fadeScale 1.2s ease-out;
+            padding: 60px 20px;
         }
 
         .stitches::before {
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
-        }  
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+        }
 
         .hero-content {
             position: relative;
             z-index: 2;
             max-width: 800px;
-            padding: 0 20px;
+            padding: 0 16px;
             animation: slideUp 0.9s ease;
-        } 
+        }
 
-         .hero-content p {
-            font-size: 18px;
-            letter-spacing: 3px;
+        .hero-content p {
+            font-size: 14px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             color: #d4af37;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 400;
         }
 
         .hero-content h1 {
-            font-size: 64px;
+            font-size: clamp(32px, 8vw, 64px);
             font-weight: 700;
             color: white;
             line-height: 1.2;
-            text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
-        } 
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+        }
 
-         @keyframes fadeScale {
-            from { opacity: 0; transform: scale(1.02); }
-            to { opacity: 1; transform: scale(1); }
+        @keyframes fadeScale {
+            from {
+                opacity: 0;
+                transform: scale(1.02);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        } 
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* ---------------------- ABOUT (LUXE LAYOUT) ---------------------- */
-         .abt {
+        .abt {
             display: flex;
             align-items: center;
-            gap: 60px;
-            padding: 90px 7%;
+            gap: 40px;
+            padding: 60px 5%;
             background: #fffaf5;
+            flex-wrap: wrap;
         }
 
         .about {
             flex: 1;
-            height: 550px;
+            min-height: 350px;
+            height: auto;
+            aspect-ratio: 4/3;
             border-radius: 24px;
             background-image: url(./img/pinterest12.jpg);
             background-size: cover;
             background-position: center;
-            box-shadow: 0 25px 40px -20px rgba(0,0,0,0.3);
+            box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.3);
             transition: transform 0.5s;
         }
 
@@ -250,113 +288,113 @@
 
         .about-us {
             flex: 1;
-            padding-left: 20px;
+            padding: 0 10px;
         }
 
         .about-us h1 {
-            font-size: 48px;
+            font-size: clamp(32px, 6vw, 48px);
             font-weight: 700;
             color: #2c241f;
             border-left: 4px solid #d4af37;
-            padding-left: 20px;
-            margin-bottom: 30px;
+            padding-left: 18px;
+            margin-bottom: 24px;
         }
 
         .about-us p {
-            font-size: 18px;
-            line-height: 1.7;
+            font-size: clamp(15px, 4vw, 18px);
+            line-height: 1.65;
             color: #4a3f38;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .about-us h2 {
-            font-size: 26px;
+            font-size: clamp(22px, 5vw, 26px);
             font-weight: 600;
             color: #1e1a17;
-            margin-top: 20px;
-        } 
+            margin-top: 16px;
+        }
 
         /* ---------------------- ADVANTAGE SECTION (ELEGANT CARDS) ---------------------- */
-         .our {
+        .our {
             background: #0c0b0a;
             color: #f5efe8;
-            padding: 90px 5%;
+            padding: 60px 5%;
             text-align: center;
         }
 
         .our h4 {
             color: #d4af37;
-            font-size: 18px;
+            font-size: 16px;
             letter-spacing: 2px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .our h2 {
-            font-size: 42px;
-            margin-bottom: 60px;
+            font-size: clamp(28px, 6vw, 42px);
+            margin-bottom: 40px;
             font-weight: 500;
         }
 
         .gl {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             justify-content: center;
             flex-wrap: wrap;
             max-width: 1300px;
             margin: 0 auto;
         }
 
-        .gl > div {
+        .gl>div {
             flex: 1;
-            min-width: 260px;
-            background: rgba(255,255,240,0.03);
+            min-width: 250px;
+            background: rgba(255, 255, 240, 0.03);
             backdrop-filter: blur(2px);
-            padding: 40px 30px;
+            padding: 30px 20px;
             border-radius: 28px;
             transition: all 0.4s;
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        .gl > div:hover {
-            transform: translateY(-12px);
+        .gl>div:hover {
+            transform: translateY(-8px);
             background: rgba(212, 175, 55, 0.05);
             border-color: #d4af37;
         }
 
         .gl h1 {
-            font-size: 58px;
+            font-size: 48px;
             font-weight: 700;
             color: #d4af37;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .gl h5 {
-            font-size: 22px;
-            margin-bottom: 20px;
-        } 
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
 
         /* ---------------------- PRODUCTS (MODERN CARDS) ---------------------- */
-         .products {
+        .products {
             background: #fefaf5;
-            padding: 90px 5%;
+            padding: 60px 5%;
             text-align: center;
         }
 
         .products h3 {
             color: #d4af37;
-            font-size: 18px;
+            font-size: 15px;
             letter-spacing: 2px;
         }
 
         .products h1 {
-            font-size: 48px;
-            margin-bottom: 55px;
+            font-size: clamp(32px, 6vw, 48px);
+            margin-bottom: 40px;
             color: #2c241f;
         }
 
         .plains {
             display: flex;
-            gap: 40px;
+            gap: 30px;
             justify-content: center;
             flex-wrap: wrap;
         }
@@ -365,19 +403,21 @@
             background: white;
             border-radius: 28px;
             overflow: hidden;
-            max-width: 360px;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+            max-width: 340px;
+            width: 100%;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
             transition: all 0.5s;
         }
 
         .material:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 45px -12px rgba(0,0,0,0.25);
+            transform: translateY(-8px);
+            box-shadow: 0 30px 45px -12px rgba(0, 0, 0, 0.25);
         }
 
         .material img {
             width: 100%;
-            height: 380px;
+            height: auto;
+            aspect-ratio: 4/5;
             object-fit: cover;
             transition: transform 0.6s;
         }
@@ -387,13 +427,13 @@
         }
 
         .material h2 {
-            font-size: 24px;
-            padding: 25px 20px 10px;
+            font-size: 22px;
+            padding: 20px 16px 8px;
             color: #1e1a17;
         }
 
         .material p {
-            padding: 0 25px 35px;
+            padding: 0 20px 30px;
             color: #5e554c;
             line-height: 1.5;
         }
@@ -402,10 +442,10 @@
             display: inline-block;
             background: #1e1a17;
             color: #d4af37;
-            padding: 14px 40px;
+            padding: 12px 34px;
             border-radius: 40px;
             font-weight: 600;
-            margin-top: 50px;
+            margin-top: 40px;
             border: 1px solid #d4af37;
         }
 
@@ -413,56 +453,61 @@
             background: #d4af37;
             color: #0a0a0a;
             border-color: #0a0a0a;
-        } 
+        }
 
         /* ---------------------- FEATURED + SLIDER (DYNAMIC) ---------------------- */
         .fea {
             display: flex;
-            gap: 60px;
+            gap: 40px;
             align-items: center;
-            padding: 90px 7%;
+            padding: 60px 5%;
             background: linear-gradient(145deg, #fff5ec, #ffffff);
+            flex-wrap: wrap;
         }
 
         .feature {
             flex: 1;
+            min-width: 260px;
         }
 
         .feature h2 {
-            font-size: 38px;
-            margin-bottom: 25px;
+            font-size: clamp(28px, 5vw, 38px);
+            margin-bottom: 20px;
             position: relative;
             display: inline-block;
         }
 
         .feature h2:after {
             content: '';
-            width: 70px;
+            width: 60px;
             height: 3px;
             background: #d4af37;
             position: absolute;
-            bottom: -12px;
+            bottom: -10px;
             left: 0;
         }
 
         .feature p {
-            line-height: 1.7;
-            font-size: 17px;
-            margin: 35px 0 40px;
+            line-height: 1.65;
+            font-size: clamp(15px, 3.5vw, 17px);
+            margin: 28px 0 30px;
             color: #4a3f38;
         }
 
         .feature img {
-            width: 80%;
+            width: 100%;
+            max-width: 280px;
             border-radius: 28px;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
         }
 
         .pic {
             flex: 1;
             overflow: hidden;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
         .pic-track {
@@ -472,95 +517,119 @@
         }
 
         .pic-track img {
-            width: 500px;
-            height: 420px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            aspect-ratio: 5/4;
             object-fit: cover;
         }
 
         @keyframes slideShow {
-            0%, 20% { transform: translateX(0); }
-            25%, 45% { transform: translateX(-100%); }
-            50%, 70% { transform: translateX(-200%); }
-            75%, 95% { transform: translateX(-300%); }
-            100% { transform: translateX(0); }
-        } 
+
+            0%,
+            20% {
+                transform: translateX(0);
+            }
+
+            25%,
+            45% {
+                transform: translateX(-100%);
+            }
+
+            50%,
+            70% {
+                transform: translateX(-200%);
+            }
+
+            75%,
+            95% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
 
         /* ---------------------- BLOG SECTION (MODERN GRID) ---------------------- */
-         .blog-section {
-            padding: 90px 5%;
+        .blog-section {
+            padding: 60px 5%;
             background: #fefaf5;
         }
 
         .section-title {
             text-align: center;
-            font-size: 48px;
-            margin-bottom: 60px;
+            font-size: clamp(32px, 6vw, 48px);
+            margin-bottom: 45px;
             font-weight: 600;
         }
 
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             max-width: 1300px;
             margin: 0 auto;
         }
 
         .blog-card {
             background: white;
-            border-radius: 28px;
+            border-radius: 24px;
             overflow: hidden;
             transition: 0.4s;
-            box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
         }
 
         .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 28px 38px -12px rgba(0,0,0,0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 28px 38px -12px rgba(0, 0, 0, 0.15);
         }
 
         .blog-card img {
             width: 100%;
-            height: 260px;
+            height: auto;
+            aspect-ratio: 16/10;
             object-fit: cover;
         }
 
         .blog-card h4 {
-            font-size: 22px;
-            padding: 25px 25px 12px;
+            font-size: 20px;
+            padding: 22px 20px 8px;
         }
 
         .blog-card p {
-            padding: 0 25px 20px;
+            padding: 0 20px 18px;
             color: #5e554c;
-            line-height: 1.6;
+            line-height: 1.55;
+            font-size: 14px;
         }
 
         .read-more {
             display: inline-block;
-            margin: 0 25px 30px;
+            margin: 0 20px 24px;
             color: #d4af37;
             font-weight: 700;
         }
 
         .blog-button {
             text-align: center;
-            margin-top: 55px;
+            margin-top: 45px;
         }
 
         .blog-button a {
             background: #1e1a17;
             color: #d4af37;
-            padding: 14px 45px;
+            padding: 12px 38px;
             border-radius: 40px;
             font-weight: 600;
             transition: 0.3s;
+            display: inline-block;
         }
 
         .blog-button a:hover {
             background: #d4af37;
             color: #0a0a0a;
-        } 
+        }
 
         /* ---------------------- FOOTER (ELEGANT) ---------------------- */
         .footer {
@@ -571,14 +640,14 @@
 
         .newsletter {
             text-align: center;
-            padding: 60px 20px;
+            padding: 45px 20px;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             background: #11100e;
         }
 
         .newsletter h2 {
             color: #d4af37;
-            font-size: 32px;
+            font-size: clamp(26px, 5vw, 32px);
         }
 
         .newsletter form {
@@ -586,12 +655,13 @@
             justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
-            margin-top: 25px;
+            margin-top: 20px;
         }
 
         .newsletter input {
-            padding: 14px 22px;
-            width: 320px;
+            padding: 12px 18px;
+            width: 280px;
+            max-width: 100%;
             border: none;
             border-radius: 60px;
             background: #2a241f;
@@ -600,7 +670,7 @@
         }
 
         .newsletter button {
-            padding: 14px 32px;
+            padding: 12px 28px;
             border-radius: 60px;
             border: none;
             background: #d4af37;
@@ -612,19 +682,20 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            gap: 50px;
-            padding: 70px 7%;
+            gap: 40px;
+            padding: 50px 5%;
         }
 
         .footer-col {
             flex: 1;
-            min-width: 220px;
+            min-width: 200px;
         }
 
-        .footer-col h2, .footer-col h3 {
+        .footer-col h2,
+        .footer-col h3 {
             color: #d4af37;
-            margin-bottom: 25px;
-            font-size: 22px;
+            margin-bottom: 20px;
+            font-size: 20px;
         }
 
         .footer-col ul {
@@ -632,42 +703,46 @@
         }
 
         .footer-col li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .footer-col a {
             color: #bcaea0;
+            font-size: 14px;
         }
 
         .footer-col a:hover {
             color: #d4af37;
-            padding-left: 6px;
+            padding-left: 4px;
         }
 
         .map iframe {
             border-radius: 18px;
             margin-top: 18px;
+            width: 100%;
+            height: 140px;
         }
 
         .footer-bottom {
             text-align: center;
-            padding: 25px;
+            padding: 20px;
             border-top: 1px solid #222;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             background: #25D366;
             color: white;
-            font-size: 28px;
-            padding: 14px 18px;
+            font-size: 24px;
+            padding: 12px 15px;
             border-radius: 50%;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
             z-index: 1100;
             transition: 0.3s;
+            line-height: 1;
         }
 
         .whatsapp-float:hover {
@@ -677,17 +752,18 @@
 
         .totop {
             background: #d4af37;
-            padding: 12px 16px;
+            padding: 10px 14px;
             border-radius: 50px;
             color: #0a0a0a;
             position: fixed;
-            bottom: 30px;
-            right: 110px;
+            bottom: 20px;
+            right: 90px;
             cursor: pointer;
             opacity: 0;
             transition: 0.3s;
             z-index: 1000;
             font-weight: bold;
+            font-size: 18px;
         }
 
         .totop.active {
@@ -700,53 +776,280 @@
             top: 50%;
             transform: translateY(-50%);
             background: #d4af37;
-            width: 52px;
-            height: 52px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            font-size: 24px;
             color: black;
             z-index: 1100;
             transition: 0.3s;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
         }
 
-        .nav-right { right: 20px; }
-        .nav-left { left: 20px; }
-        .nav-btn:hover { transform: translateY(-50%) scale(1.1); background: #c6a42b; } 
+        .nav-right {
+            right: 15px;
+        }
 
-        /* Responsive */
+        .nav-left {
+            left: 15px;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-50%) scale(1.08);
+            background: #c6a42b;
+        }
+
+        /* ========== ENHANCED RESPONSIVE BREAKPOINTS ========== */
         @media(max-width: 992px) {
-            .hero-content h1 { font-size: 48px; }
-            .abt { flex-direction: column; text-align: center; }
-            .about-us h1 { border-left: none; text-align: center; }
-            .fea { flex-direction: column; }
+            .hero-content h1 {
+                font-size: 46px;
+            }
 
+            .abt {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-us h1 {
+                border-left: none;
+                text-align: center;
+                padding-left: 0;
+            }
+
+            .fea {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .feature h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+            }
         }
-            
-        
+
         @media (max-width: 768px) {
-            .topbar { flex-direction: column; text-align: center; }
-            .social-and-title { flex-direction: column; }
-            .hamburger { display: block; }
-            .nav-list { max-height: 0; overflow: hidden; transition: max-height 0.4s; }
-            #nav-toggle:checked ~ .nav-list { max-height: 380px; }
-            .nav-list ul { flex-direction: column; gap: 18px; padding: 20px 0; }
-            .ellae { padding: 15px 20px; }
-            .hero-content h1 { font-size: 38px; }
-            .about { height: 380px; }
-            .pic-track img { width: 100vw; height: 280px; }
-            .gl > div { margin: 0 10px; }
-            .totop { right: 20px; bottom: 90px; }
+            .topbar {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+
+            .social-and-title {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-list {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            #nav-toggle:checked~.nav-list {
+                max-height: 450px;
+            }
+
+            .nav-list ul {
+                flex-direction: column;
+                gap: 14px;
+                padding: 20px 0 12px;
+                align-items: center;
+            }
+
+            .ellae {
+                padding: 14px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .about {
+                min-height: 280px;
+            }
+
+            .gl>div {
+                margin: 0;
+            }
+
+            .totop {
+                right: 20px;
+                bottom: 80px;
+            }
+
+            .pic-track img {
+                max-width: 100%;
+            }
+
+            .nav-right {
+                right: 12px;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .nav-left {
+                left: 12px;
+                width: 40px;
+                height: 40px;
+            }
         }
+
+        @media (max-width: 600px) {
+            .brand-name {
+                font-size: 16px;
+                letter-spacing: 0.5px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 6px;
+                align-items: center;
+            }
+
+            .contact-info a {
+                font-size: 11px;
+            }
+
+            .hero-content p {
+                font-size: 12px;
+                letter-spacing: 1.5px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .products h1 {
+                font-size: 36px;
+            }
+
+            .blog-card h4 {
+                font-size: 18px;
+            }
+
+            .newsletter input {
+                width: 100%;
+            }
+
+            .footer-container {
+                gap: 30px;
+                padding: 40px 5%;
+            }
+
+            .feature img {
+                max-width: 100%;
+            }
+        }
+
         @media (max-width: 480px) {
-            .brand-name { font-size: 14px; }
-            .contact-info { flex-direction: column; gap: 8px; }
-        } 
+            .brand-name {
+                font-size: 14px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+            }
+
+            .top {
+                padding: 10px 12px;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .about {
+                min-height: 240px;
+            }
+
+            .gl h1 {
+                font-size: 38px;
+            }
+
+            .gl h5 {
+                font-size: 18px;
+            }
+
+            .material h2 {
+                font-size: 20px;
+            }
+
+            .button a {
+                padding: 10px 28px;
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .whatsapp-float {
+                padding: 10px 13px;
+                font-size: 22px;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .totop {
+                padding: 8px 12px;
+                font-size: 16px;
+                bottom: 75px;
+                right: 15px;
+            }
+        }
+
+        /* Fix for very small devices */
+        @media (max-width: 360px) {
+            .hero-content h1 {
+                font-size: 26px;
+            }
+
+            .gl>div {
+                padding: 24px 16px;
+            }
+
+            .feature h2 {
+                font-size: 28px;
+            }
+        }
+
+        /* Prevent overflow on edge cases */
+        .container,
+        .abt,
+        .fea,
+        .our,
+        .products,
+        .blog-section {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Smooth touch interactions */
+        a,
+        button,
+        .hamburger,
+        .totop,
+        .nav-btn {
+            -webkit-tap-highlight-color: transparent;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- TOP BAR LUXURY -->
@@ -798,7 +1101,9 @@
             <div class="about"></div>
             <div class="about-us">
                 <h1>About Us</h1>
-                <p>Our vision is to be a brand that provides quality clothings that meets both local and international demands. <br>We create clothes that combines simplicity with elegance, all within a practical/realistic budget.</p>
+                <p>Our vision is to be a brand that provides quality clothings that meets both local and international
+                    demands. <br>We create clothes that combines simplicity with elegance, all within a
+                    practical/realistic budget.</p>
                 <h2>Emmanuella Ebubechukwu.</h2>
                 <h6>Founder and lead Designer.</h6>
             </div>
@@ -810,9 +1115,21 @@
         <h4>Our Advantage</h4>
         <h2>What Makes Us Different.</h2>
         <div class="gl">
-            <div><h1>01</h1><h5>GLOCAL BRAND</h5><p>Global standard with local integration — outfits that satisfy international and local demands.</p></div>
-            <div><h1>02</h1><h5>TIMELY DELIVERY</h5><p>Reputation for neatly sewn, well-tailored garments on time and on budget.</p></div>
-            <div><h1>03</h1><h5>FASHION ENTREPRENEURSHIP</h5><p>Training system designed to empower young people in building fashion businesses.</p></div>
+            <div>
+                <h1>01</h1>
+                <h5>GLOCAL BRAND</h5>
+                <p>Global standard with local integration — outfits that satisfy international and local demands.</p>
+            </div>
+            <div>
+                <h1>02</h1>
+                <h5>TIMELY DELIVERY</h5>
+                <p>Reputation for neatly sewn, well-tailored garments on time and on budget.</p>
+            </div>
+            <div>
+                <h1>03</h1>
+                <h5>FASHION ENTREPRENEURSHIP</h5>
+                <p>Training system designed to empower young people in building fashion businesses.</p>
+            </div>
         </div>
     </section>
 
@@ -821,9 +1138,18 @@
         <h3>RANGE OF PRODUCTS</h3>
         <h1>What We Make</h1>
         <div class="plains">
-            <div class="material"><img src="./img/twopiece2.jpg" alt="Plain and pattern"><h2>PLAIN AND PATTERN</h2><p>Carefully chosen fabrics for special occasions and everyday use.</p></div>
-            <div class="material"><img src="./img/skirt11.jpg" alt="Ankara"><h2>ANKARA LOVERS</h2><p>Traditionally made outfits for special occasions — we've got you covered.</p></div>
-            <div class="material"><img src="./img/twopiece11.jpg" alt="Two piece"><h2>TWO PIECE</h2><p>Unique, beautiful styles crafted just for you.</p></div>
+            <div class="material"><img src="./img/twopiece2.jpg" alt="Plain and pattern">
+                <h2>PLAIN AND PATTERN</h2>
+                <p>Carefully chosen fabrics for special occasions and everyday use.</p>
+            </div>
+            <div class="material"><img src="./img/skirt11.jpg" alt="Ankara">
+                <h2>ANKARA LOVERS</h2>
+                <p>Traditionally made outfits for special occasions — we've got you covered.</p>
+            </div>
+            <div class="material"><img src="./img/twopiece11.jpg" alt="Two piece">
+                <h2>TWO PIECE</h2>
+                <p>Unique, beautiful styles crafted just for you.</p>
+            </div>
         </div>
         <div class="button"><a href="gallery.html">See more...</a></div>
     </section>
@@ -833,7 +1159,8 @@
         <div class="fea">
             <div class="feature">
                 <h2>FEATURED PRODUCTS</h2>
-                <p>Custom-made outfits for ladies and kids, ready-to-wear apparels, uniforms for organizations, fashion accessories — neck ties, scarfs, lapels, pins, and belts.</p>
+                <p>Custom-made outfits for ladies and kids, ready-to-wear apparels, uniforms for organizations, fashion
+                    accessories — neck ties, scarfs, lapels, pins, and belts.</p>
                 <img src="./img/headband" alt="luxury accessory">
             </div>
             <div class="pic">
@@ -852,9 +1179,22 @@
         <div class="container">
             <h1 class="section-title">Our Blog</h1>
             <div class="blog-grid">
-                <article class="blog-card"><img src="./img/Conversation.webp" alt="influencers"><h4>Connecting With Influencers: The Why and How</h4><p>Isaac Newton famously said, “If I have seen further, it is by standing on the shoulders of giants.” Mentors and influencers help us go farther...</p><a href="#" class="read-more">Read more →</a></article>
-                <article class="blog-card"><img src="./img/lady-with-bag.webp" alt="style details"><h4>Want To Look Good? Watch Out For These Style Details</h4><p>Looking good is not just about putting on a great outfit. Pay attention to details for your next occasion...</p><a href="#" class="read-more">Read more →</a></article>
-                <article class="blog-card"><img src="./img/patternmaking tools.webp" alt="pattern drafting"><h4>Practical Tips For Getting Started With Pattern Drafting</h4><p>Pattern drafting can feel overwhelming. If you’ve ever felt unsure, don’t worry — taking the first step matters most...</p><a href="#" class="read-more">Read more →</a></article>
+                <article class="blog-card"><img src="./img/Conversation.webp" alt="influencers">
+                    <h4>Connecting With Influencers: The Why and How</h4>
+                    <p>Isaac Newton famously said, “If I have seen further, it is by standing on the shoulders of
+                        giants.” Mentors and influencers help us go farther...</p><a href="#" class="read-more">Read
+                        more →</a>
+                </article>
+                <article class="blog-card"><img src="./img/lady-with-bag.webp" alt="style details">
+                    <h4>Want To Look Good? Watch Out For These Style Details</h4>
+                    <p>Looking good is not just about putting on a great outfit. Pay attention to details for your next
+                        occasion...</p><a href="#" class="read-more">Read more →</a>
+                </article>
+                <article class="blog-card"><img src="./img/patternmaking tools.webp" alt="pattern drafting">
+                    <h4>Practical Tips For Getting Started With Pattern Drafting</h4>
+                    <p>Pattern drafting can feel overwhelming. If you’ve ever felt unsure, don’t worry — taking the
+                        first step matters most...</p><a href="#" class="read-more">Read more →</a>
+                </article>
             </div>
             <div class="blog-button"><a href="blog.html">Continue Reading</a></div>
         </div>
@@ -865,14 +1205,44 @@
         <div class="newsletter">
             <h2>Join Our Fashion Community</h2>
             <p>Subscribe to get exclusive updates, new collections & styling tips.</p>
-            <form><input type="email" placeholder="Enter your email address" required><button type="submit">Subscribe</button></form>
+            <form><input type="email" placeholder="Enter your email address" required><button
+                    type="submit">Subscribe</button></form>
         </div>
         <div class="footer-container">
-            <div class="footer-col brand"><h2>Ella Stitches & Styles</h2><p>Where elegance meets craftsmanship. We create timeless, structured and unforgettable fashion statements.</p><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
-            <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="aboutus.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="blog.html">Blog</a></li><li><a href="academy.html">Academy</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-            <div class="footer-col"><h3>Visit Us</h3><ul><li>Okwurrata, After Deputy Governor's House</li><li>+234 912 231 9633</li><li>info@ellastitchesandstyles.com</li><li>Mon - Sat | 9AM - 6PM</li></ul><div class="map"><iframe src="https://www.google.com/maps?q=Okwurrata&output=embed" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div></div>
+            <div class="footer-col brand">
+                <h2>Ella Stitches & Styles</h2>
+                <p>Where elegance meets craftsmanship. We create timeless, structured and unforgettable fashion
+                    statements.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="academy.html">Academy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <ul>
+                    <li>Okwurrata, After Deputy Governor's House</li>
+                    <li>+234 912 231 9633</li>
+                    <li>info@ellastitchesandstyles.com</li>
+                    <li>Mon - Sat | 9AM - 6PM</li>
+                </ul>
+                <div class="map"><iframe src="https://www.google.com/maps?q=Okwurrata&output=embed" width="100%"
+                        height="150" style="border:0;" allowfullscreen="" loading="lazy" title="Location map"></iframe>
+                </div>
+            </div>
         </div>
-        <div class="footer-bottom"><p>© 2026 Ella Stitches & Styles. All Rights Reserved.</p></div>
+        <div class="footer-bottom">
+            <p>© 2026 Ella Stitches & Styles. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <a href="https://wa.me/2349122319633" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -881,8 +1251,11 @@
 
     <script>
         const toTop = document.getElementById('totop');
-        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-        window.addEventListener('scroll', () => { window.scrollY > 200 ? toTop.classList.add('active') : toTop.classList.remove('active'); });
+        if (toTop) {
+            toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            window.addEventListener('scroll', () => { window.scrollY > 200 ? toTop.classList.add('active') : toTop.classList.remove('active'); });
+        }
     </script>
 </body>
+
 </html>
