@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/blog.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ========================================= -->
+    <!-- TOP BAR: Social Links & Contact Info      -->
+    <!-- ========================================= -->
+    <section class="top">
+        <div class="topbar">
+            <div class="social-and-title">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="brand-name">
+                    ELLA STITCHES AND STYLES
+                </div>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:emmanuellaebubechukwu9@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    emmanuellaebubechukwu9@gmail.com
+                </a>
+                <a href="tel:+2349122319633">
+                    <i class="fa-solid fa-phone"></i>
+                    +2349122319633
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- STICKY NAVIGATION with Hamburger Menu     -->
+    <!-- ========================================= -->
+    <section class="ellae">
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="blog.html" class="active">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="academy.html">ACADEMY</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- PAGE NAVIGATION BUTTONS (Prev / Next)     -->
+    <!-- ========================================= -->
+    <a href="gallery.html" class="nav-btn nav-left" aria-label="Previous page: About Us">
+        <span>&#10094;</span>
+    </a>
+    <a href="contact.html" class="nav-btn nav-right" aria-label="Next page: Blog">
+        <span>&#10095;</span>
+    </a>
+
+    </head>
+
+    <body>
+
+        <!-- ========================================= -->
+        <!-- BACK TO TOP BUTTON                        -->
+        <!-- ========================================= -->
+        <span class="totop" id="totop" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </span>
+
+        <script>
+            let totop = document.getElementById("totop");
+
+            // scroll to top when clicked
+            totop.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            // show or hide button when scrolling
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 200) {
+                    totop.classList.add("active");
+                } else {
+                    totop.classList.remove("active");
+                }
+            });
+        </script>
+
+
+
+        <section>
+            <div class="container">
+                <h1>BLOG</h1>
+                <h3>Tips and Updates</h3>
+            </div>
+
+
+
+            <div class="contents">
+
+                <div class="content">
+                    <img src="./img/Conversation.webp" alt="Connecting with influencers">
+                    <h3><a href="../conversation.html">Connecting with influencers: the why and how</a></h3>
+                    <p>
+                        Isaac Newton famously said, “If I have seen further, it is by standing on the shoulders of
+                        giants.”
+                        Among other things, this quote is a reminder of how mentors, connectors and influencers can help
+                        us
+                        go farther, faster...
+                    </p>
+                </div>
+
+                <div class="content">
+                    <img src="./img/lady-with-bag.webp" alt="Style details">
+                    <h3><a href="../details.html">Want to look good? Watch out for these style details</a></h3>
+                    <p>
+                        Looking good is not just about putting on a great outfit. More importantly you need to pay
+                        attention
+                        to the details. Be mindful of these tips when you're dressing for your next occasion...
+                    </p>
+                </div>
+
+                <div class="content">
+                    <img src="./img/patternmaking tools.webp" alt="Pattern drafting tools">
+                    <h3><a href="./pattern.html">5 practical tips for getting started with pattern drafting</a></h3>
+                    <p>
+                        Pattern drafting can be quite overwhelming for a beginner especially when you don't even know
+                        where
+                        to start. If you have ever felt this way, don’t worry...
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="subscribe-section">
+
+            <div class="subscribe-container">
+
+                <div class="keep">
+                    <h2>Keep In Touch</h2>
+                    <p>
+                        Enter your name and email to get notified of new developments and special offers.
+                        We’ll also send you periodic tips and ideas on the business of looking good,
+                        with a dose of inspiration.
+                    </p>
+                </div>
+
+                <div class="right">
+                    <form class="subscribe-form">
+
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+
+                        <button type="submit" class="btn">CONNECT</button>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="newsletter">
+                <h2>Join Our Fashion Community</h2>
+                <p>Subscribe to get exclusive updates, new collections & styling tips.</p>
+                <form><input type="email" placeholder="Enter your email address" required><button
+                        type="submit">Subscribe</button></form>
+            </div>
+            <div class="footer-container">
+                <div class="footer-col brand">
+                    <h2>Ella Stitches & Styles</h2>
+                    <p>Where elegance meets craftsmanship. We create timeless, structured and unforgettable fashion
+                        statements.</p>
+                    <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                                class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="academy.html">Academy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit Us</h3>
+                    <ul>
+                        <li>Okwurrata, After Deputy Governor's House</li>
+                        <li>+234 912 231 9633</li>
+                        <li>info@ellastitchesandstyles.com</li>
+                        <li>Mon - Sat | 9AM - 6PM</li>
+                    </ul>
+                    <div class="map"><iframe src="https://www.google.com/maps?q=Okwurrata&output=embed" width="100%"
+                            height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Ella Stitches & Styles. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <a href="https://wa.me/2349122319633" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/apply.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+        <section class="top">
+        <div class="topbar">
+            <div class="social-and-title">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="brand-name">
+                    ELLA STITCHES AND STYLES
+                </div>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:emmanuellaebubechukwu9@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    emmanuellaebubechukwu9@gmail.com
+                </a>
+                <a href="tel:+2349122319633">
+                    <i class="fa-solid fa-phone"></i>
+                    +2349122319633
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- STICKY NAVIGATION with Hamburger Menu     -->
+    <!-- ========================================= -->
+    <section class="ellae">
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="academy.html" class="active">ACADEMY</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- BACK TO TOP BUTTON                        -->
+    <!-- ========================================= -->
+    <span class="totop" id="totop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </span>
+
+        <script>
+            let totop = document.getElementById("totop");
+
+            // scroll to top when clicked
+            totop.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            // show or hide button when scrolling
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 200) {
+                    totop.classList.add("active");
+                } else {
+                    totop.classList.remove("active");
+                }
+            });
+        </script>
+
+
+
+
+
+    <section class="portal-section">
+        <button id="darkToggle" class="dark-toggle">🌙 Dark Mode</button>
+
+
+        <!-- LOGIN FORM -->
+        <div class="form-container" id="loginContainer">
+            <h2>Student Login</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p>No account? <span id="showRegister">Register</span></p>
+            </form>
+        </div>
+
+
+        <!-- REGISTRATION FORM -->
+        <div class="form-container" id="registerContainer" style="display:none;">
+            <h2>Register</h2>
+
+            <!-- STEP 1: USER DETAILS -->
+            <form id="registerForm">
+
+                <input type="text" id="regName" placeholder="Full Name" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+
+                <h4>Select Course</h4>
+                <label><input type="radio" name="course" value="Beginner" required> Beginner (₦180,000)</label>
+                <label><input type="radio" name="course" value="Intermediate"> Intermediate (₦120,000)</label>
+                <label><input type="radio" name="course" value="Advanced"> Advanced (₦100,000)</label>
+
+                <button type="submit">Proceed to Payment</button>
+
+                <p>Already registered? <span id="showLogin">Login Here</span></p>
+            </form>
+
+
+            <!-- STEP 2: PAYMENT SECTION (Hidden First) -->
+            <div id="paymentSection" style="display:none; margin-top:20px;">
+                <h3>Payment Details</h3>
+
+                <p><strong>Bank:</strong> UBA</p>
+                <p><strong>Account Name:</strong> Ella Stitches and Styles</p>
+                <p><strong>Account Number:</strong> 2331867037</p>
+
+                <h4>Upload Payment Proof</h4>
+                <input type="file" id="regProof" accept="image/*" required>
+
+                <button id="completeRegistration">Confirm Payment & Complete Registration</button>
+            </div>
+        </div>
+
+
+        <!-- DASHBOARD -->
+        <div class="dashboard" id="dashboard" style="display:none;">
+            <h2>🎓 Student Dashboard</h2>
+
+            <p><strong>Name:</strong> <span id="dashName"></span></p>
+            <p><strong>Email:</strong> <span id="dashEmail"></span></p>
+            <p><strong>Course:</strong> <span id="dashCourse"></span></p>
+            <p><strong>Amount Paid:</strong> ₦<span id="dashAmount"></span></p>
+
+            <button id="logoutBtn">Logout</button>
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="newsletter">
+            <h2>Join Our Fashion Community</h2>
+            <p>Subscribe to get exclusive updates, new collections & styling tips.</p>
+            <form><input type="email" placeholder="Enter your email address" required><button type="submit">Subscribe</button></form>
+        </div>
+        <div class="footer-container">
+            <div class="footer-col brand"><h2>Ella Stitches & Styles</h2><p>Where elegance meets craftsmanship. We create timeless, structured and unforgettable fashion statements.</p><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div></div>
+            <div class="footer-col"><h3>Quick Links</h3><ul><li><a href="index.html">Home</a></li><li><a href="aboutus.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="blog.html">Blog</a></li><li><a href="academy.html">Academy</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-col"><h3>Visit Us</h3><ul><li>Okwurrata, After Deputy Governor's House</li><li>+234 912 231 9633</li><li>info@ellastitchesandstyles.com</li><li>Mon - Sat | 9AM - 6PM</li></ul><div class="map"><iframe src="https://www.google.com/maps?q=Okwurrata&output=embed" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div></div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 Ella Stitches & Styles. All Rights Reserved.</p></div>
+    </footer>
+
+    <a href="https://wa.me/2349122319633" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <!-- <span class="totop" id="totop"><i class="fas fa-arrow-up"></i></span>
+    <a href="aboutus.html" class="nav-btn nav-right"><span>&#10095;</span></a> -->
+
+    
+
+
+
+    <script>
+
+
+        const toggle = document.getElementById("darkToggle");
+        const portal = document.querySelector(".portal-section");
+
+        /* ===== LOAD SAVED THEME ON PAGE LOAD ===== */
+        if (localStorage.getItem("portalTheme") === "dark") {
+            portal.classList.add("dark-mode");
+            toggle.innerText = "☀ Light Mode";
+        }
+
+        /* ===== TOGGLE DARK MODE ===== */
+        toggle.addEventListener("click", function () {
+
+            portal.classList.toggle("dark-mode");
+
+            if (portal.classList.contains("dark-mode")) {
+                toggle.innerText = "☀ Light Mode";
+                localStorage.setItem("portalTheme", "dark");
+            }
+            else {
+                toggle.innerText = "🌙 Dark Mode";
+                localStorage.setItem("portalTheme", "light");
+            }
+
+        });
+
+
+        
+
+        // Course Prices (DECLARE ONLY ONCE)
+        const prices = {
+            "Beginner": 180000,
+            "Intermediate": 120000,
+            "Advanced": 100000
+        };
+
+        let tempUserData = {}; // store user before payment
+
+
+        // Switch forms
+        document.getElementById("showRegister").onclick = () => {
+            document.getElementById("loginContainer").style.display = "none";
+            document.getElementById("registerContainer").style.display = "block";
+        };
+
+        document.getElementById("showLogin").onclick = () => {
+            document.getElementById("registerContainer").style.display = "none";
+            document.getElementById("loginContainer").style.display = "block";
+        };
+
+
+        // STEP 1: SHOW PAYMENT DETAILS
+        document.getElementById("registerForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("regName").value;
+            const email = document.getElementById("regEmail").value;
+            const password = document.getElementById("regPassword").value;
+            const course = document.querySelector('input[name="course"]:checked').value;
+
+            tempUserData = {
+                name,
+                email,
+                password,
+                course,
+                amount: prices[course]
+            };
+
+            document.getElementById("registerForm").style.display = "none";
+            document.getElementById("paymentSection").style.display = "block";
+        });
+
+
+        // STEP 2: COMPLETE REGISTRATION AFTER PAYMENT
+        document.getElementById("completeRegistration").addEventListener("click", function () {
+
+            const proof = document.getElementById("regProof").files[0];
+
+            if (!proof) {
+                alert("Please upload payment proof.");
+                return;
+            }
+
+            const reader = new FileReader();
+
+            reader.onload = function () {
+
+                const student = {
+                    ...tempUserData,
+                    proof: reader.result // ✅ FIXED (removed semicolon)
+                };
+
+                localStorage.setItem("student_" + student.email, JSON.stringify(student));
+                localStorage.setItem("loggedInUser", student.email);
+
+                loadDashboard(student);
+            };
+
+            reader.readAsDataURL(proof);
+        });
+
+
+        // LOGIN
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            const storedUser = JSON.parse(localStorage.getItem("student_" + email));
+
+            if (!storedUser || storedUser.password !== password) {
+                alert("Invalid login details");
+                return;
+            }
+
+            localStorage.setItem("loggedInUser", email);
+            loadDashboard(storedUser);
+        });
+
+
+        // LOAD DASHBOARD
+        function loadDashboard(user) {
+            document.getElementById("loginContainer").style.display = "none";
+            document.getElementById("registerContainer").style.display = "none";
+            document.getElementById("dashboard").style.display = "block";
+
+            document.getElementById("dashName").textContent = user.name;
+            document.getElementById("dashEmail").textContent = user.email;
+            document.getElementById("dashCourse").textContent = user.course;
+            document.getElementById("dashAmount").textContent = user.amount.toLocaleString();
+        }
+
+
+        // AUTO LOGIN IF SESSION EXISTS
+        window.onload = function () {
+            const loggedIn = localStorage.getItem("loggedInUser");
+            if (loggedIn) {
+                const user = JSON.parse(localStorage.getItem("student_" + loggedIn));
+                if (user) {
+                    loadDashboard(user);
+                }
+            }
+        };
+
+
+        // LOGOUT
+        document.getElementById("logoutBtn").onclick = function () {
+            localStorage.removeItem("loggedInUser");
+            location.reload();
+        };
+
+    </script>
+
+
+</body>
+
+</html>

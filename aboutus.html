@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Ella Stitches and Styles - About Us. Nigerian fashion brand specializing in bespoke outfits, ready-to-wear, and fashion training.">
+    <meta name="keywords" content="Ella Stitches, fashion designer, about us, Nigerian fashion, bespoke outfits">
+    <meta name="author" content="Ella Stitches & Styles">
+    <title>About Us | Ella Stitches & Styles - Elegance & Craftsmanship</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <!-- Google Fonts - Luxury Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- External About Us CSS -->
+    <link rel="stylesheet" href="./css/aboutus.css">
+
+    <!-- ========================================= -->
+    <!-- TOP BAR: Social Links & Contact Info      -->
+    <!-- ========================================= -->
+    <section class="top">
+        <div class="topbar">
+            <div class="social-and-title">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="brand-name">
+                    ELLA STITCHES AND STYLES
+                </div>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:emmanuellaebubechukwu9@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    emmanuellaebubechukwu9@gmail.com
+                </a>
+                <a href="tel:+2349122319633">
+                    <i class="fa-solid fa-phone"></i>
+                    +2349122319633
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- STICKY NAVIGATION with Hamburger Menu     -->
+    <!-- ========================================= -->
+    <section class="ellae">
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html" class="active">ABOUT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="academy.html">ACADEMY</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    
+    <!-- ========================================= -->
+    <!-- PAGE NAVIGATION BUTTONS (Prev / Next)     -->
+    <!-- ========================================= -->
+
+    <a href="index.html" class="nav-btn nav-left" aria-label="Previous page: About Us">
+        <span>&#10094;</span>
+    </a>
+    <a href="gallery.html" class="nav-btn nav-right" aria-label="Next page: Blog">
+        <span>&#10095;</span>
+    </a>
+
+    </head>
+
+    <body>
+
+        <!-- ========================================= -->
+        <!-- BACK TO TOP BUTTON                        -->
+        <!-- ========================================= -->
+
+        <span class="totop" id="totop">
+            <i class="fas fa-arrow-up"></i>
+        </span>
+
+        <script>
+            let totop = document.getElementById("totop");
+
+            // scroll to top when clicked
+            totop.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            // show or hide button when scrolling
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 200) {
+                    totop.classList.add("active");
+                } else {
+                    totop.classList.remove("active");
+                }
+            });
+        </script>
+
+    
+    <!-- ========================================= -->
+    <!-- MAIN ABOUT US HERO SECTION                -->
+    <!-- ========================================= -->
+
+    <section class="aboutus">
+        <div class="abt">
+            <h1>About Us</h1>
+        </div>
+        <div class="about">
+            <p>
+                Ella Stitches and Styles, we bring creativity, elegance, and precision together to create designs
+                that speak confidence and individuality. As a passionate fashion designer, our goal is to craft
+                outfits that fit beautifully, feel comfortable, and reflect your unique style.
+                <br><br>
+                From custom-made pieces to detailed alterations, every stitch is handled with care, quality, and
+                attention to detail. We believe fashion is more than clothing—it’s a way to express who you are.
+                <br><br>
+                At Ella Stitches and Styles, your style is our priority, and excellence is our standard.
+            </p>
+            <div class="img">
+                <img src="./img/dress1.jpg" alt="Ella Stitches signature couture dress showcasing elegance">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- MORE ABOUT US: Vision, Mission & Values   -->
+    <!-- ========================================= -->
+    <section class="design">
+        <div class="des">
+            <h2>More About Us</h2>
+            <p>Ella Stitches and styles is a Nigerian fashion design brand that started full operation in 2022.</p>
+            <p>We specialise in designing and making bespoke and ready-to-wear outfits for the classy and modest
+                contemporary woman.</p>
+            <p>We also design and produce kids clothing as well as hand-made fashion accessories. We have a
+                reputation for delivering neatly sewn and well-tailored garments in a timely fashion.</p>
+            <p>In addition to our tailoring and fashion design services, we have a well-structured training system
+                designed to empower young people and mentor them in establishing and building their own businesses.
+            </p>
+
+            <h3>Our Vision</h3>
+            <p>Our vision is to be a brand that provides quality clothing that meet local demands while also
+                competing favourably with foreign fashion brands.</p>
+            <p>We seek to create clothes that combine simplicity with elegance, all within a practical/realistic
+                budget.</p>
+        </div>
+        <img src="./img/pinterest20.jpg" alt="Ella Stitches elegant fashion design showcase">
+    </section>
+
+    <!-- FOOTER -->
+        <footer class="footer">
+            <div class="newsletter">
+                <h2>Join Our Fashion Community</h2>
+                <p>Subscribe to get exclusive updates, new collections & styling tips.</p>
+                <form><input type="email" placeholder="Enter your email address" required><button
+                        type="submit">Subscribe</button></form>
+            </div>
+            <div class="footer-container">
+                <div class="footer-col brand">
+                    <h2>Ella Stitches & Styles</h2>
+                    <p>Where elegance meets craftsmanship. We create timeless, structured and unforgettable fashion
+                        statements.</p>
+                    <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                                class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="academy.html">Academy</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Visit Us</h3>
+                    <ul>
+                        <li>Okwurrata, After Deputy Governor's House</li>
+                        <li>+234 912 231 9633</li>
+                        <li>info@ellastitchesandstyles.com</li>
+                        <li>Mon - Sat | 9AM - 6PM</li>
+                    </ul>
+                    <div class="map"><iframe src="https://www.google.com/maps?q=Okwurrata&output=embed" width="100%"
+                            height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Ella Stitches & Styles. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <a href="https://wa.me/2349122319633" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+
+    </body>
+
+</html>

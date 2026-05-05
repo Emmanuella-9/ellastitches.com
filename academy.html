@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/academy.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- ========================================= -->
+    <!-- TOP BAR: Social Links & Contact Info      -->
+    <!-- ========================================= -->
+    <section class="top">
+        <div class="topbar">
+            <div class="social-and-title">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <div class="brand-name">
+                    ELLA STITCHES AND STYLES
+                </div>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:emmanuellaebubechukwu9@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    emmanuellaebubechukwu9@gmail.com
+                </a>
+                <a href="tel:+2349122319633">
+                    <i class="fa-solid fa-phone"></i>
+                    +2349122319633
+                </a>
+            </div>
+        </div>
+    </section>
+  
+    <!-- ========================================= -->
+    <!-- STICKY NAVIGATION with Hamburger Menu     -->
+    <!-- ========================================= -->
+    <section class="ellae">
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="academy.html" class="active">ACADEMY</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    
+
+    <!-- ========================================= -->
+    <!-- PAGE NAVIGATION BUTTONS (Prev / Next)     -->
+    <!-- ========================================= -->
+    <a href="contact.html" class="nav-btn nav-left" aria-label="Previous page: About Us">
+        <span>&#10094;</span>
+    </a>
+
+    </head>
+
+    <body>
+
+
+        <!-- ========================================= -->
+        <!-- BACK TO TOP BUTTON                        -->
+        <!-- ========================================= -->
+        <span class="totop" id="totop" aria-label="Scroll to top">
+            <!-- <i class="fas fa-arrow-up"></i> -->
+        </span>
+
+        <script>
+            let totop = document.getElementById("totop");
+
+            // scroll to top when clicked
+            totop.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            // show or hide button when scrolling
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 200) {
+                    totop.classList.add("active");
+                } else {
+                    totop.classList.remove("active");
+                }
+            });
+        </script>
+
+
+
+        <section>
+            <div class="academy">
+                <img src="./img/istockphoto-691693178-612x612.jpg" alt="">
+                <div class="isp">
+                    <h4>ELLA STITCHES AND STYLES</h4>
+                    <h1>FASHION ACADEMY</h1>
+                    <p>MAKE YOUR DREAM A REALITY.</p>
+                    <p>BRING YOUR CREATIVITY TO LIFE!</p>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="help">
+                <h1>Let’s help you hone your skills and express your creativity.</h1>
+            </div>
+            <div class="help-p">
+                <p>At Ella stitches and style Fashion Academy, we are known for our dedication to excellence and the
+                    creativity
+                    that
+                    permeates all aspects of our work.</p>
+                <p>Our comprehensive training programs are designed to transform you from beginner to expert with a
+                    solid
+                    foundation in the theory and practice of fashion design even if you’ve never used needle and thread
+                    before.
+                    Our curriculum covers all you need to know about sewing tools and equipment, tailoring terms and
+                    definitions, sewing techniques, pattern drafting, fabric types, garment construction, and much more.
+                </p>
+                <p>We also teach the business side of fashion so that you can understand how to profit from your skills.
+                    Sounds
+                    great! Doesn’t it? If you’ve ever desired the kind of complete training that will help you to stand
+                    out
+                    as
+                    an expert fashion designer, then your search stops at Ella stitiches and styles Fashion Academy.</p>
+            </div>
+
+        </section>
+        <section>
+            <div class="train">
+                <h1>TRAINING PROGRAMS</h1>
+                <h3>ONE OF OUR PROGRAMS WILL SUIT YOUR NEEDS AND SKILL LEVEL</h3>
+                <div class="training">
+                    <div class="trains">
+                        <h5>Women's Program</h5>
+                        <P>This comes in three packages – beginner, intermediate and advanced based on your desired
+                            level of
+                            expertise. <a href="">see details of our full packages below.</a></P>
+                    </div>
+                    <div class="trains">
+                        <h5>Children's Wear program</h5>
+                        <p>learn how to make dresses for children. complete sign-up form below to request details.</p>
+                    </div>
+                    <div class="trains">
+                        <h5>Weekend Courses</h5>
+                        <p>Weekend class is only available for beginners. Intermediate level will be available soon.
+                            Lecture
+                            Days: Fridays and Saturdays. Duration: 5 months. Fridays: 3pm – 5pm. Saturdays: 10am – 2pm.
+                            Tuition Fee: N120,000</p>
+                    </div>
+                    <div class="trains">
+                        <h5>Upgrade course <br>patternmaking</h5>
+                        <p>This course is designed for dressmakers who use Freehand technique and will like to upgrade
+                            to
+                            pattern drfting (Natalie Bray method). Duration: 3 months. Lecture Days: Monday – Wednesday.
+                            Fee: N100,000. Time: 9a.m. to 2p.m.</p>
+                    </div>
+                    <div class="trains">
+                        <h5>Wardrobe Staples</h5>
+                        <p>This full package Beginners Course in Womenswear is designed to take you from zero knowledge
+                            in
+                            fashion designing to be able to make basic outfits ranging from casual to corporate and
+                            party
+                            wears. (aso-ebi).</p>
+                    </div>
+                    <div class="trains">
+                        <h5>Online Course <br>End of the year sales!!!</h5>
+                        <p>Starting from (18th November to 9th December) Up to 30% off on all Courses. Duration: 12
+                            weeks
+                            but can be taken as self paced. Fee: N 60,000. <span>🏉 Single sewing projects and bundles
+                                are
+                                also available.</span></p>
+                        <p>Click the APPLY button below to register.</p>
+                    </div>
+                    <div class="trains">
+                        <h5>Apprenticeship Based Program</h5>
+                        <p>An all-inclusive package designed for young people who have ample time at their disposal.
+                            Duration: 18 months. Lecture Days: Monday – Friday. Time : 8a.m. to 5p.m.</p>
+                        <p>Tuition Fee: ₦180,000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="women">
+                <hr>
+                <h1>WOMEN'S WEAR PROGRAM</h1>
+                <div class="men">
+                    <div class="wear">
+                        <h4>Beginner</h4>
+                        <hr>
+                        <h3>N120,000</h3>
+                        <hr>
+                        <ul>
+                            <li>Duration: 3 months</li>
+                            <li>Lecture days: Monday - thursday</li>
+                            <li>Time: 10am - 3pm</li>
+                        </ul>
+                    </div>
+                    <div class="wear" id="wear22">
+                        <h4>Intermediate</h4>
+                        <hr>
+                        <h3>N100,000</h3>
+                        <hr>
+                        <ul>
+                            <li>Duration: 3 months</li>
+                            <li>Lecture days: Monday - thursday</li>
+                            <li>Time: 10am - 3pm</li>
+                        </ul>
+                    </div>
+                    <div class="wear">
+                        <h4>Advanced</h4>
+                        <hr>
+                        <h3>N80,000</h3>
+                        <hr>
+                        <ul>
+                            <li>Duration: 3 months</li>
+                            <li>Lecture days: Monday - wednesday</li>
+                            <li>Time: 10am - 3pm</li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+
+        <section>
+            <hr>
+            <div class="ready">
+                <h1>READY TO JOIN US?</h1>
+                <p>Apply below, make payment to reserve a slot and resume classes. An application fee of N5000 applies
+                    to
+                    all courses. Account details available on the application form.
+
+                    Admission is guaranteed only after payment is confirmed. All confirmations and necessary information
+                    will be sent to your registered email address.
+
+                    Please note that apart from the online courses which you can take from anywhere, training location
+                    is in
+                    Owerri, Nigeria. For enquiries, send an email to emmanuellaebubechukwu9@gmail.com or call
+                    +2349122319633.</p>
+            </div>
+            <div class="button">
+                <a href="apply.html" class="apply-btn">Apply Now</a>
+
+            </div>
+
+        </section>
+
+        <section>
+            <div class="future">
+                <h1>THE FUTURE IS NOW!</h1>
+                <P>Take advantage of this opportunity to set yourself on the path of becoming a seasoned fashion
+                    designer
+                    and business owner. This is one investment you will be forever happy that you made. Take the first
+                    step
+                    and stop putting your future on hold!</P>
+
+                <!-- <div class="buttons">
+                <a href="./apply.html"class="cta-btn">Apply Now</a>
+            </div> -->
+
+
+            </div>
+
+        </section>
+
+        <section>
+            <div class="meet">
+                <img src="./img/me.jpeg" alt="">
+                <div class="lead">
+                    <h1>MEET THE LEAD TUTOR.</h1>
+                    <p>Emmanuella Ebubechukwu is the Creative Director of Ella stitches and styles as well as the head
+                        tutor
+                        at
+                        Ella stitches and styles Academy. She is a passionate fashion entrepreneur who is committed to
+                        expressing
+                        creativity with a keen sense of excellence.
+                        Her proactive spirit and determined disposition are two of the entrepreneurial qualities that
+                        have
+                        helped her rise above apparent limitations to birth Ella stitches and styles.
+                        she is an alumna of Imo state university where she got her BSc in Accountancy.
+                        she is driven by her passion for fashion as a vehicle for
+                        helping young people to not only express their creativity but also overcome the challenge of
+                        unemployment, thus empowering them to rise above seemingly impossible situations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h1>STILL THINKING ABOUT IT?</h1>
+
+            <div class="container">
+                <div class="left">
+                    <h2>Get on the waiting list and get free resources</h2>
+                    <p>
+                        If you are not ready to sign up for a training program at this time,
+                        you would do well to join our WhatsApp community. This grants you access to
+                        <strong>free training videos</strong> and other resources to start and grow your
+                        <strong>fashion design business.</strong>
+                    </p>
+                </div>
+
+                <div class="right">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+
+                        <button class="btn">GET ME IN!</button>
+
+                        <p class="note">
+                            Once you SUBMIT your information wait a few seconds for the page to reload.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+    <footer class="footer">
+        <div class="newsletter">
+            <h2>Join Our Fashion Community</h2>
+            <p>Subscribe to get exclusive updates, new collections & styling tips.</p>
+            <form><input type="email" placeholder="Enter your email address" required><button
+                    type="submit">Subscribe</button></form>
+        </div>
+        <div class="footer-container">
+            <div class="footer-col brand">
+                <h2>Ella Stitches & Styles</h2>
+                <p>Where elegance meets craftsmanship. We create timeless, structured and unforgettable fashion
+                    statements.</p>
+                <div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i
+                            class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="academy.html">Academy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Visit Us</h3>
+                <ul>
+                    <li>Okwurrata, After Deputy Governor's House</li>
+                    <li>+234 912 231 9633</li>
+                    <li>info@ellastitchesandstyles.com</li>
+                    <li>Mon - Sat | 9AM - 6PM</li>
+                </ul>
+                <div class="map"><iframe src="https://www.google.com/maps?q=Okwurrata&output=embed" width="100%"
+                        height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ella Stitches & Styles. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/2349122319633" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+
+    <script>
+        const toTop = document.getElementById('totop');
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        window.addEventListener('scroll', () => { window.scrollY > 200 ? toTop.classList.add('active') : toTop.classList.remove('active'); });
+    </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STYLED · admin dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* THEME VARIABLES */
+
+        :root {
+            --bg-main: #0f0f10;
+            --bg-card: #121214;
+            --bg-soft: #1a1a1e;
+            --text-main: #ffffff;
+            --text-muted: #9d9dab;
+            --border: #222226;
+        }
+
+        body.light {
+            --bg-main: #f5f5f7;
+            --bg-card: #ffffff;
+            --bg-soft: #ececf0;
+            --text-main: #111;
+            --text-muted: #555;
+            --border: #dddddd;
+        }
+
+        body {
+            background: var(--bg-main);
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+            transition: 0.3s;
+        }
+
+        .dashboard {
+            max-width: 1360px;
+            width: 100%;
+            background: var(--bg-card);
+            border-radius: 32px;
+            padding: 2rem 2rem 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        /* HEADER */
+
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-header h1 {
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 1.8rem;
+            letter-spacing: -0.02em;
+        }
+
+        .badge-light {
+            background: var(--bg-soft);
+            color: var(--text-muted);
+            padding: .5rem 1.2rem;
+            border-radius: 40px;
+            font-size: .9rem;
+            border: 1px solid var(--border);
+        }
+
+        .theme-toggle {
+            margin-left: 10px;
+            background: var(--bg-soft);
+            border: 1px solid var(--border);
+            padding: .5rem .8rem;
+            border-radius: 30px;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        /* KPI */
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border-radius: 28px;
+            padding: 1.5rem 1.2rem;
+            border: 1px solid var(--border);
+        }
+
+        .kpi-label {
+            color: var(--text-muted);
+            font-size: .9rem;
+            margin-bottom: .5rem;
+        }
+
+        .kpi-value {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .kpi-number {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .trend-up {
+            color: #3fe3a0;
+            background: rgba(63, 227, 160, 0.08);
+            padding: .25rem .8rem;
+            border-radius: 40px;
+        }
+
+        .trend-down {
+            color: #f86a6a;
+            background: rgba(248, 106, 106, 0.08);
+            padding: .25rem .8rem;
+            border-radius: 40px;
+        }
+
+        /* LAYOUT */
+
+        .dashboard-layout {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .sidebar {
+            flex: 0 0 210px;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        /* NAV */
+
+        .nav-menu {
+            background: var(--bg-card);
+            border-radius: 30px;
+            padding: 1.6rem 1rem;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+        }
+
+        .nav-item {
+            color: var(--text-muted);
+            padding: .7rem 1rem;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-item.active {
+            background: var(--bg-soft);
+            color: var(--text-main);
+        }
+
+        .settings-divider {
+            margin: 1rem 0 .5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* CHART CARD */
+
+        .trends-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .trends-chart,
+        .mini-product-card,
+        .top-products,
+        .info-card {
+            background: var(--bg-card);
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+        }
+
+        .trends-chart {
+            flex: 2;
+        }
+
+        .mini-product-card {
+            flex: 1;
+        }
+
+        .trends-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .day-badge {
+            background: var(--bg-soft);
+            padding: .4rem 1.2rem;
+            border-radius: 40px;
+            font-size: .85rem;
+        }
+
+        .dummy-chart-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: .8rem;
+            height: 140px;
+            margin: 1.8rem 0 .5rem;
+        }
+
+        .bar {
+            width: 30px;
+            background: linear-gradient(to top, #3b3b4a, #5f5f74);
+            border-radius: 12px;
+        }
+
+        .bar:nth-child(1) {
+            height: 70px;
+        }
+
+        .bar:nth-child(2) {
+            height: 110px;
+        }
+
+        .bar:nth-child(3) {
+            height: 95px;
+        }
+
+        .bar:nth-child(4) {
+            height: 130px;
+        }
+
+        .bar:nth-child(5) {
+            height: 80px;
+        }
+
+        .bar:nth-child(6) {
+            height: 60px;
+        }
+
+        .month-labels {
+            display: flex;
+            gap: .8rem;
+            font-size: .8rem;
+            color: var(--text-muted);
+        }
+
+        .month-labels span {
+            width: 30px;
+            text-align: center;
+        }
+
+        /* PRODUCTS */
+
+        .section-title {
+            color: var(--text-main);
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th {
+            text-align: left;
+            font-size: .85rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: .6rem;
+        }
+
+        td {
+            padding: .8rem 0;
+            border-bottom: 1px dashed var(--border);
+            color: var(--text-main);
+        }
+
+        /* BOTTOM GRID */
+
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr .9fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .cat-item {
+            display: flex;
+            justify-content: space-between;
+            padding: .8rem 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        .cat-value {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .channel-row {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            margin: .8rem 0;
+        }
+
+        .channel-name {
+            width: 110px;
+            color: var(--text-muted);
+        }
+
+        .bar-bg {
+            flex: 1;
+            height: 10px;
+            background: #23232a;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 10px;
+            background: #6c5dd3;
+            border-radius: 20px;
+        }
+
+        .channel-percent {
+            width: 45px;
+            text-align: right;
+            color: var(--text-main);
+        }
+
+        .inventory-row {
+            display: flex;
+            justify-content: space-between;
+            padding: .9rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .lowstock {
+            background: #3a2a2a;
+            color: #ff9f9f;
+            padding: .2rem .8rem;
+            border-radius: 40px;
+            font-size: .8rem;
+        }
+
+        .theme-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <div class="dashboard-header">
+
+            <h1>ELLA STITCHES AND STYLES</h1>
+
+            <div class="theme-area">
+                <div class="badge-light"><i class="far fa-calendar-alt"></i> last 30 days</div>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- KPI -->
+
+        <div class="kpi-grid">
+
+            <div class="kpi-card">
+                <div class="kpi-label">TOTAL SALES</div>
+                <div class="kpi-value"><span class="kpi-number">N4M</span><span class="trend-up">+15%</span></div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-label">NUMBER OF STUDENTS</div>
+                <div class="kpi-value"><span class="kpi-number">50</span><span class="trend-up">+8%</span></div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-label">NEW CUSTOMERS</div>
+                <div class="kpi-value"><span class="kpi-number">1K</span><span class="trend-up">+12%</span></div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="kpi-label">CONVERSION RATE</div>
+                <div class="kpi-value"><span class="kpi-number">3.8%</span><span class="trend-down">-2%</span></div>
+            </div>
+
+        </div>
+
+        <div class="dashboard-layout">
+
+            <div class="sidebar">
+
+                <div class="nav-menu">
+                    <div class="nav-item active"><i class="fas fa-chart-pie"></i> Products</div>
+                    <div class="nav-item"><i class="fas fa-users"></i> Customers</div>
+                    <div class="nav-item"><i class="fas fa-bullhorn"></i> Marketing</div>
+                    <!-- <div class="nav-item"><i class="fas fa-boxes"></i> Inventory</div> -->
+                    <!-- <div class="nav-item"><i class="fas fa-file-alt"></i> Content Mgmt</div> -->
+                    <div class="settings-divider"></div>
+                    <div class="nav-item"><i class="fas fa-sliders-h"></i> Settings</div>
+                </div>
+
+            </div>
+
+            <div class="main-content">
+
+                <div class="trends-row">
+
+                    <div class="trends-chart">
+
+                        <div class="trends-header">
+                            <h3>Style Trends & Revenue</h3>
+                            <div class="day-badge">Day vs Month</div>
+                        </div>
+
+                        <div class="dummy-chart-bars">
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+
+                        <div class="month-labels">
+                            <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                        </div>
+
+                    </div>
+
+                    <div class="mini-product-card">
+
+                        <div style="color:var(--text-main);font-weight:500;margin-bottom:1rem;">TOP PRODUCT</div>
+
+                        <table>
+                            <tr>
+                                <th>Product</th>
+                                <th>Units</th>
+                                <th>Revenue</th>
+                                <th>Rating</th>
+                            </tr>
+
+                            <tr>
+                                <td>Corset</td>
+                                <td>130</td>
+                                <td>$29.7M</td>
+                                <td>★★★★★</td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <div class="top-products">
+
+                    <div class="section-title">TOP PERFORMING STYLES</div>
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Style Name</th>
+                                <th>Units</th>
+                                <th>Revenue</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Corset</td>
+                                <td>130</td>
+                                <td>N3M</td>
+                                <td>★★★★★</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="bottom-grid">
+
+                    <div class="info-card">
+
+                        <div style="color:var(--text-main);font-size:1.1rem;">Style BY CATEGORY</div>
+
+                        <div class="cat-item"><span>Womenswear</span><span class="cat-value">45%</span></div>
+                        <div class="cat-item"><span>Menswear</span><span class="cat-value">28%</span></div>
+                        <div class="cat-item"><span>Accessories</span><span class="cat-value">18%</span></div>
+                        <div class="cat-item"><span>Footwear</span><span class="cat-value">9%</span></div>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <div style="color:var(--text-main);font-size:1.1rem;">CUSTOMER ACQUISITION CHANNELS</div>
+
+                        <div class="channel-row">
+                            <span class="channel-name">Organic</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill" style="width:75%"></div>
+                            </div>
+                            <span class="channel-percent">75%</span>
+                        </div>
+
+                        <div class="channel-row">
+                            <span class="channel-name">Paid Ads</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill" style="width:45%"></div>
+                            </div>
+                            <span class="channel-percent">45%</span>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="info-card">
+
+                        <div style="color:var(--text-main);font-size:1.1rem;">INVENTORY STATUS</div>
+
+                        <div class="inventory-row">Silk Wrap Dress <span>24 <span class="lowstock">Low</span></span>
+                        </div>
+                        <div class="inventory-row">Leather Tote Bag <span>10 <span class="lowstock">Low</span></span>
+                        </div>
+
+                    </div> -->
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        const toggle = document.getElementById("themeToggle")
+
+        if (localStorage.getItem("theme") === "light") {
+            document.body.classList.add("light")
+            toggle.innerHTML = '<i class="fas fa-sun"></i>'
+        }
+
+        toggle.onclick = () => {
+            document.body.classList.toggle("light")
+
+            if (document.body.classList.contains("light")) {
+                toggle.innerHTML = '<i class="fas fa-sun"></i>'
+                localStorage.setItem("theme", "light")
+            } else {
+                toggle.innerHTML = '<i class="fas fa-moon"></i>'
+                localStorage.setItem("theme", "dark")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
